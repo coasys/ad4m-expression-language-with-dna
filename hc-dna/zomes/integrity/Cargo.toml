@@ -1,0 +1,18 @@
+[package]
+name = "integrity"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "integrity"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+derive_more = "0"
+serde = "1"
+chrono = { version = "0.4.31", default-features = false, features = ["clock", "std", "oldtime", "serde"] }
+holo_hash = { version = "0.3.0-beta-dev.21", git = "https://github.com/coasys/holochain.git", rev = "e97988ca9aff16b18a66cd0b20456bc6a5e9a26e"}
+hdi = { version = "0.4.0-beta-dev.26", git = "https://github.com/coasys/holochain.git", rev = "e97988ca9aff16b18a66cd0b20456bc6a5e9a26e" }
+hdk = { version = "0.3.0-beta-dev.30", git = "https://github.com/coasys/holochain.git", rev = "e97988ca9aff16b18a66cd0b20456bc6a5e9a26e" }
